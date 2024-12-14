@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil Utilisateur{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1 class="mb-4">Profil Utilisateur</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.name }}</h5>
+            <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+            <p class="card-text"><strong>Rôle:</strong> {{ user.roles ? user.roles|join(', ') : 'N/A' }}</p>
+        </div>
+    </div>
+
+    <h2 class="mt-4">Livres empruntés</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Date d'emprunt</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for borrow in user.borrows %}
+            <tr>
+                <td>{{ borrow.book.title }}</td>
+                <td>{{ borrow.borrowDate|date('d/m/Y') }}</td>
+                <td>{{ borrow.status }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Aucun livre emprunté</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+

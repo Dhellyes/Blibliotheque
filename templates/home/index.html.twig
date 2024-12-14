@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue à la Bibliothèque{% endblock %}
+
+{% block body %}
+<div class="jumbotron bg-light mt-5 p-5 rounded">
+    <h1 class="display-4 text-primary">Bienvenue à notre Bibliothèque</h1>
+    <p class="lead">Découvrez notre vaste collection de livres et gérez facilement vos emprunts.</p>
+    <hr class="my-4">
+    <p>Explorez nos fonctionnalités pour gérer les livres, les auteurs, les emprunts et les emprunteurs en toute simplicité.</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title text-primary">
+                    <i class="fas fa-book me-2"></i>Livres
+                </h2>
+                <p class="card-text">Parcourez notre collection de livres, ajoutez de nouveaux titres ou mettez à jour les informations existantes.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a class="btn btn-primary btn-lg btn-block" href="{{ path('app_book_index') }}">
+                    Gérer les Livres
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title text-primary">
+                    <i class="fas fa-user-edit me-2"></i>Auteurs
+                </h2>
+                <p class="card-text">Explorez notre liste d'auteurs, ajoutez de nouveaux écrivains ou mettez à jour leurs informations biographiques.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a class="btn btn-primary btn-lg btn-block" href="{{ path('app_author_index') }}">
+                    Gérer les Auteurs
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title text-primary">
+                    <i class="fas fa-exchange-alt me-2"></i>Emprunts
+                </h2>
+                <p class="card-text">Suivez les emprunts de livres, enregistrez de nouveaux prêts ou gérez les retours de manière efficace.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a class="btn btn-primary btn-lg btn-block" href="{{ path('app_borrow_index') }}">
+                    Gérer les Emprunts
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title text-primary">
+                    <i class="fas fa-users me-2"></i>Emprunteurs
+                </h2>
+                <p class="card-text">Gérez les informations des emprunteurs, consultez leurs historiques d'emprunts et leurs statuts actuels.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a class="btn btn-primary btn-lg btn-block" href="{{ path('app_user_index') }}">
+                    Gérer les Emprunteurs
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+    background-color: #FFF5E6;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #FF6B35 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+    color: #FFF !important;
+}
+
+.navbar-light .nav-link:hover {
+    color: #FFD5C2 !important;
+}
+
+/* Cards */
+.card {
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0,0,0,.15);
+}
+
+.card-title {
+    color: #FF6B35;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #FF6B35;
+    border-color: #FF6B35;
+}
+
+.btn-primary:hover {
+    background-color: #E85A2E;
+    border-color: #E85A2E;
+}
+
+/* Tables */
+.table {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.table thead {
+    background-color: #FF6B35;
+    color: white;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: #FF6B35;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+/* Page Titles */
+.page-title {
+    color: #FF6B35;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Login Page */
+.login-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+}
+
+.login-form h1 {
+    color: #FF6B35;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form .form-control {
+    margin-bottom: 15px;
+}
+
+.login-form .btn-primary {
+    width: 100%;
+}
+
+/* Book List Page */
+.book-list .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Author List Page */
+.author-list .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 200px;
+    margin: 20px auto 0;
+}
+
+/* Borrow List Page */
+.borrow-status {
+    font-weight: bold;
+}
+
+.borrow-status.active {
+    color: #28a745;
+}
+
+.borrow-status.overdue {
+    color: #dc3545;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .login-form {
+        margin: 20px;
+    }
+}
+
